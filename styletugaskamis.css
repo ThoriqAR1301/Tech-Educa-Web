@@ -1,0 +1,596 @@
+*{
+    margin: 0;
+    padding: 0;
+    top: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* General Styles */
+body{
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-style: normal;
+    font-optical-sizing: auto;
+}
+
+a{
+    text-decoration: none;
+    color: #2C3E50;
+}
+
+h1 h2 h3{
+    margin: 0;
+}
+
+/* Navbar Styles */
+header{
+    background-color: #fff;
+    padding: 40px 40px;
+    position: fixed;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+    width: 100vw;
+}
+
+nav{
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vw 8vw;
+}
+
+nav .nav-links{
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+}
+
+nav .nav-links li a{
+    list-style: none;
+    margin-left: 30px;
+}
+
+nav .nav-links li a:hover{
+    color: #FDC938;
+}
+
+#menu-btn{
+    width: 30px;
+    height: 30px;
+    display: none;
+}
+
+#menu-close{
+    display: none;
+}
+
+@media (max-width:800px){
+    #menu-btn{
+        display: initial;
+    }
+    #menu-close{
+        display: initial;
+        font-size: 1.6rem;
+        color: white;
+        padding: 30px 0 20px 20px;
+    }
+    nav .navigation ul{
+        position: absolute;
+        top: 0;
+        right: -220px;
+        width: 220px;
+        background-color: rgba(17, 20, 104, 0.45);
+        height: 100vh;
+        backdrop-filter: blur(4.5px);
+        border: 1px solid gray;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        transition: 0.3s ease;
+    }
+    nav .navigation ul li{
+        padding: 20px 0 20px 40px;
+        margin-left: 0;
+    }
+    nav .navigation ul li a{
+        color: white;
+    }
+    nav .navigation ul.active{
+        right: 0;
+    }
+}
+
+nav .logo{
+    display: flex;
+    align-items: center;
+}
+
+nav .logo img{
+    height: 50px;
+    margin-left: 30px;
+}
+
+/* Hero Section Styles */
+.hero{
+    background: url(images/back2.jpg) no-repeat center center/cover;
+    background-size: cover;
+    height: 1000px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero .overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content{
+    position: relative;
+}
+
+.hero h1{
+    font-size: 48px;
+    color: #fff;
+}
+
+.hero p{
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.hero .btn{
+    padding: 15px 20px;
+    margin: 0 10px;
+    background-color: #F39C12;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+}
+
+.hero .btn1{
+    padding: 15px 20px;
+    margin: 0 10px;
+    background-color: blue;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+}
+
+.hero .btn:hover{
+    background-color: beige;
+    color: #F39C12;
+}
+
+.hero .btn1:hover{
+    background-color: beige;
+    color: #F39C12;
+}
+
+/* Features Styles */
+.features{
+    padding: 100px 0;
+    text-align: center;
+}
+
+.features h2{
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.feature-grid{
+    display: flex;
+    justify-content: center;
+}
+
+.feature{
+    background-color: #ECF0F1;
+    margin: 10px;
+    padding: 20px;
+    width: 30%;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.feature h3{
+    color: #2C3E50;
+    font-size: 20px;
+}
+
+.feature img{
+    max-width: 10%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Courses Styles */
+.courses{
+    padding: 100px 0;
+    text-align: center;
+    background-color: #f7f7f7;
+}
+
+.courses h2{
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.course-grid{
+    display: flex;
+    justify-content: center;
+}
+
+.course-grid1{
+    display: flex;
+    justify-content: center;
+}
+
+.course-card{
+    background-color: #fff;
+    margin: 10px;
+    padding: 20px;
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.course-card img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.course-card h3{
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.course-card .cost{
+    background-color: rgb(74, 74, 136);
+    color: #fff;
+    line-height: 100px;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    border-radius: 50%;
+    position: relative;
+    left: 400px;
+    bottom: 185px;
+}
+
+/* Rating Styles */
+.rating{
+    color: #F39C12;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.rating span{
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
+/* Add Hover Effect To Course Card */
+.course-card:hover{
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Registration Styles */
+.registration{
+    height: 35vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-image: url(images/back2.jpg);
+    background-size: cover;
+    background-position: 0;
+    justify-content: space-evenly;
+}
+
+.registration .overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.reminder{
+    color: white;
+    display: grid;
+    padding-top: 25px;
+    padding-left: 25px;
+    text-align: left;
+    grid-area: Reminder;
+    position: relative;
+}
+
+.reminder p{
+    font-weight: 400px;
+    font-size: 23px;
+    text-align: left;
+}
+
+.reminder h1{
+    font-size: 60px;
+    color: #fff;
+}
+
+.time{
+    display: flex;
+    gap: 20px;
+    padding: 50px 0;
+}
+
+.date{
+    background-color: rgba(252, 248, 248, 0.274);
+    color: black;
+    border-radius: 10px;
+    padding: 10px 50px;
+    text-align: center;
+}
+
+.hours{
+    background-color: rgba(252, 248, 248, 0.274);
+    color: black;
+    border-radius: 10px;
+    padding: 10px 50px;
+    text-align: center;
+}
+
+.minutes{
+    background-color: rgba(252, 248, 248, 0.274);
+    color: black;
+    border-radius: 10px;
+    padding: 10px 50px;
+    text-align: center;
+}
+
+.seconds{
+    background-color: rgba(252, 248, 248, 0.274);
+    color: black;
+    border-radius: 10px;
+    padding: 10px 50px;
+    text-align: center;
+}
+
+.form{
+    background-color: #fff;
+    color: black;
+}
+
+.form{
+    background-color: #fff;
+    display: flex;
+    border-radius: 8px;
+    flex-direction: column;
+    padding: 30px;
+    color: black;
+    grid-area: Account;
+    position: relative;
+}
+
+.form input{
+    padding: 15px 50px 10px 15px;
+    border: 1px solid rgb(0, 0, 0);
+    outline: none;
+}
+
+.form h3{
+    margin-bottom: 20px;
+}
+
+.registration .form .btn2{
+    color: #fff;
+    background: #F39C12;
+    transition: 0.3s ease;
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 13px 35px;
+    font-weight: 400;
+    border-radius: 5px;
+}
+
+.registration .form .btn2:hover{
+    background-color: beige;
+    color: #F39C12;
+}
+
+/* Community Experts Styles */
+.community-experts{
+    padding: 8vw 8vw 8vw 8vw;
+    text-align: center;
+}
+
+h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: rgb(35, 35, 85);
+}
+
+.community-experts .expert-box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1rem;
+    margin-top: 50px;
+}
+
+.community-experts .expert-box .profile{
+    background: #fafaf1;
+    padding: 30px 10px;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    border-radius: 10px;
+}
+
+.community-experts .expert-box .profile2{
+    background: #fafaf1;
+    padding: 30px 10px;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    border-radius: 10px;
+}
+
+.community-experts .expert-box .profile3{
+    background: #fafaf1;
+    padding: 30px 10px;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    border-radius: 10px;
+}
+
+.community-experts .expert-box .profile4{
+    background: #fafaf1;
+    padding: 30px 10px;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    border-radius: 10px;
+}
+
+h6{
+    font-size: 1.1rem;
+    color: rgb(24, 24, 49);
+}
+
+.pro-links{
+    margin-top: 10px;
+}
+
+.pro-links i{
+    padding: 10px 13px;
+    border: 1px solid rgb(21, 21, 100);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.pro-links i:hover{
+    background-color: #F39C12;
+    color: #fff;
+}
+
+/* Footer Section */
+.footer{
+    padding: 4vw;
+    background-color: #101c32;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer .footer-col{
+    padding-bottom: 40px;
+}
+
+.footer h3{
+    color: rgb(241, 240, 245);
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+
+.footer li{
+    list-style: none;
+    color: #7b838a;
+    padding: 10px 0;
+    font-size: 15px;
+}
+
+.footer li:hover{
+    color: #fff;
+}
+
+.footer p{
+    color: #7b838a;
+}
+
+.footer .subscribe{
+    margin-top: 20px;
+}
+
+.footer input{
+    width: 220px;
+    padding: 15px 12px;
+    background: #334F6C;
+    border: none;
+    outline: none;
+    color: #fff;
+}
+
+.footer .subscribe a.yellow{
+    color: #fff;
+    background: #F39C12;
+    transition: 0.3s ease;
+}
+
+.footer .subscribe a{
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 12px 15px;
+    font-weight: 600;
+}
+
+.footer .subscribe a:hover{
+    background-color: beige;
+    color: #F39C12;
+}
+
+.footer .copyright{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer .copyright p > a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer .copyright p > a:hover{
+    color: #7b838a;
+}
+
+.footer .copyright .pro-links1{
+    margin-top: 0px;
+}
+
+.footer .copyright .pro-links i{
+    background-color: #5f7185;
+    color: #fff;
+}
+
+.footer .pro-links i{
+    padding: 10px 13px;
+    border: 1px solid rgb(21, 21, 100);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.footer .pro-links i:hover{
+    background-color: #F39C12;
+    color: black;
+}
